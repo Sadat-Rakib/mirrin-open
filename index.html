@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta http-equiv="Permissions-Policy" content="accelerometer=(self), gyroscope=(self), magnetometer=(self)" />
+    <title>MIRRIN — Puffer, Reengineered</title>
+    <meta name="description" content="MIRRIN FW26. Cash Money Green, Deep Freeze Blue, Cherry Bomb Pink. Interactive 3D puffers." />
+    <link rel="canonical" href="https://sadat-rakib.github.io/mirrin-open/" />
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="MIRRIN — Puffer, Reengineered" />
+    <meta property="og:description" content="MIRRIN FW26. Cash Money Green, Deep Freeze Blue, Cherry Bomb Pink." />
+    <meta property="og:image" content="https://sadat-rakib.github.io/mirrin-open/og.jpg" />
+    <meta property="og:url" content="https://sadat-rakib.github.io/mirrin-open/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="og.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="image" href="backgrounds/loop-green.jpg" />
+    <link rel="preload" href="models/green.glb" as="fetch" type="model/gltf-binary" crossorigin fetchpriority="high" />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Outfit:wght@400;500;600&family=Pirata+One&family=Permanent+Marker&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Outfit:wght@400;500;600&family=Pirata+One&family=Permanent+Marker&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+    <script type="module" crossorigin src="./assets/main-DuHN0-nb.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/products-DaRoWPrD.js">
+    <link rel="stylesheet" crossorigin href="./assets/products-Bkig0OdP.css">
+  </head>
+  <body>
+    <!-- ===================== LOADER ===================== -->
+    <div id="loader" class="loader">
+      <div class="loader__inner">
+        <img class="loader__lockup" src="brand/nav-lockup.png" alt="MIRRIN" />
+        <div class="loader__bar"><span id="loaderFill" class="loader__fill"></span></div>
+        <div class="loader__pct"><span id="loaderPct">0</span>%</div>
+        <div class="loader__hint">Preparing the atelier</div>
+      </div>
+    </div>
+
+    <!-- ===================== DYNAMIC BACKGROUND ===================== -->
+    <div class="bg" aria-hidden="true">
+      <div id="bgA" class="bg__layer is-active">
+        <video muted loop playsinline preload="none"></video>
+      </div>
+      <div id="bgB" class="bg__layer">
+        <video muted loop playsinline preload="none"></video>
+      </div>
+      <div class="bg__sweep" aria-hidden="true"></div>
+      <div class="bg__grain" aria-hidden="true"></div>
+      <div class="bg__vignette"></div>
+    </div>
+
+    <!-- ===================== 3D CANVAS ===================== -->
+    <canvas id="scene" class="scene"></canvas>
+
+    <!-- ===================== HERO OVERLAY ===================== -->
+    <header class="nav">
+      <a class="nav__brand" href="#top" aria-label="MIRRIN home">
+        <img class="nav__lockup" src="brand/nav-lockup.png" alt="MIRRIN" />
+      </a>
+      <nav class="nav__links" id="navLinks">
+        <a href="#shop" data-scroll>Shop</a>
+        <a href="#technology" data-scroll>Technology</a>
+        <a href="#about" data-scroll>Our Story</a>
+        <a href="#voices" data-scroll>Community</a>
+      </nav>
+      <button class="nav__burger" id="navBurger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+      <div class="nav__bg" role="group" aria-label="Background variant">
+        <a href="./" class="nav__bg-btn" data-bg="frame">Campaign</a>
+        <a href="./?bg=mountain" class="nav__bg-btn" data-bg="mountain">Mountain</a>
+      </div>
+      <div class="nav__right">
+        <button class="nav__icon" id="navSearch" aria-label="Search">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg>
+        </button>
+        <button class="nav__icon" id="navUser" aria-label="Account">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+        </button>
+        <button class="nav__icon nav__cart" id="navCart" aria-label="Cart">
+          <svg viewBox="0 0 24 24"><path d="M6 7h12l-1.2 12.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+          <span class="nav__badge" id="cartCount">0</span>
+        </button>
+      </div>
+    </header>
+
+    <main id="top">
+      <h1 class="visually-hidden">MIRRIN FW26 puffer — Cash Money Green, Deep Freeze Blue, Cherry Bomb Pink</h1>
+      <!-- HERO -->
+      <section class="hero" id="hero">
+        <div class="hero__orbit" id="heroOrbit" aria-hidden="true"></div>
+        <div class="hero__copy">
+          <button type="button" class="hero__mark reveal" id="markShop" aria-label="Shop this colourway">
+            <span class="hero__wm" id="heroMark"></span>
+          </button>
+        </div>
+
+        <button type="button" class="hero__label" id="labelShop">
+          <span class="hero__label-idx" id="labelIdx">01</span>
+          <div>
+            <div class="hero__label-name" id="labelName">CASH MONEY</div>
+            <div class="hero__label-gender" id="labelGender">GREEN · MEN'S PUFFER</div>
+            <div class="hero__label-price" id="labelPrice">$249</div>
+          </div>
+        </button>
+
+        <div class="sidecards" id="sidecards"></div>
+
+        <div class="picker" id="picker" aria-label="Choose a colourway" style="background-image:url('campaign/picker.webp')">
+          <button type="button" data-pick="2" aria-label="Cherry Bomb Pink"></button>
+          <button type="button" data-pick="1" aria-label="Deep Freeze Blue"></button>
+          <button type="button" data-pick="0" aria-label="Cash Money Green"></button>
+        </div>
+
+        <div class="hero__arrows">
+          <button class="round-btn" id="prevBtn" aria-label="Previous jacket">
+            <svg viewBox="0 0 24 24"><polyline points="15 6 9 12 15 18"/></svg>
+          </button>
+          <button class="round-btn" id="nextBtn" aria-label="Next jacket">
+            <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg>
+          </button>
+        </div>
+        <button type="button" class="tilt-enable" data-tilt-enable hidden>
+          <span class="tilt-enable__hey">Hey</span>
+          <span class="tilt-enable__msg">Tap to enable tilt</span>
+          <span class="tilt-enable__sub">Move your phone — the jacket follows</span>
+        </button>
+      </section>
+
+      <!-- MANIFESTO -->
+      <section class="manifesto" id="about">
+        <div class="manifesto__copy reveal">
+          <span class="eyebrow">MIRRIN</span>
+          <h2>Rebel against<br/>the ordinary.</h2>
+          <p class="manifesto__line">Express yourself.<br/>Wear your personality.</p>
+        </div>
+        <div class="manifesto__visual">
+          <img src="campaign/about.webp" alt="MIRRIN puffer" loading="lazy" />
+        </div>
+      </section>
+
+      <!-- NANO PRENE -->
+      <section class="nano" id="technology">
+        <div class="nano__visual">
+          <img src="campaign/details/green-wet.jpg" alt="MIRRIN Nano Prene shell" loading="lazy" />
+          <div class="nano__strip">
+            <img src="campaign/details/blue-wet.jpg" alt="Deep Freeze Blue shell" loading="lazy" />
+            <img src="campaign/details/pink-wet.jpg" alt="Cherry Bomb Pink shell" loading="lazy" />
+          </div>
+        </div>
+        <div class="nano__copy reveal">
+          <span class="eyebrow">NANO PRENE TECH™</span>
+          <h2>For everything life throws at you.</h2>
+          <p>Join the rebellion. Choose what you believe in.</p>
+        </div>
+      </section>
+
+      <!-- SHOP / THREE BUYS -->
+      <section class="section collection" id="shop">
+        <div class="section__head reveal">
+          <span class="eyebrow">THE DROP</span>
+          <h2>Choose what you believe in.</h2>
+          <p>Join the rebellion.</p>
+        </div>
+        <div class="cards" id="collectionCards"></div>
+      </section>
+
+      <!-- VOICES -->
+      <section class="voices" id="voices">
+        <div class="voices__head reveal">
+          <span class="eyebrow">THE MOVEMENT</span>
+          <h2>Join the other revolutionaries in the mission to change the world.</h2>
+        </div>
+        <div class="voices__grid">
+          <article class="voice">
+            <header class="voice__who">
+              <img class="voice__avatar" src="campaign/avatars/avatar-lime.png" alt="Cartoon avatar of Anika M." loading="lazy" />
+              <div>
+                <b>Anika M.</b>
+                <span>Verified buyer · Cash Money Green</span>
+                <span class="voice__loc">Mumbai, India</span>
+              </div>
+            </header>
+            <div class="voice__stars" aria-label="5 stars">★★★★★</div>
+            <p>Great fabric.</p>
+          </article>
+          <article class="voice">
+            <header class="voice__who">
+              <img class="voice__avatar" src="campaign/avatars/avatar-pink.png" alt="Cartoon avatar of Valentina R." loading="lazy" />
+              <div>
+                <b>Valentina R.</b>
+                <span>Verified buyer · Cherry Bomb Pink</span>
+                <span class="voice__loc">Bogotá, Colombia</span>
+              </div>
+            </header>
+            <div class="voice__stars" aria-label="5 stars">★★★★★</div>
+            <p>Great color, my fav jacket.</p>
+          </article>
+          <article class="voice">
+            <header class="voice__who">
+              <img class="voice__avatar" src="campaign/avatars/avatar-blue.png" alt="Cartoon avatar of Leo K." loading="lazy" />
+              <div>
+                <b>Leo K.</b>
+                <span>Verified buyer · Deep Freeze Blue</span>
+                <span class="voice__loc">Seoul, South Korea</span>
+              </div>
+            </header>
+            <div class="voice__stars" aria-label="5 stars">★★★★★</div>
+            <p>Not just a color. A mindset.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- LIMITED -->
+      <section class="freedom" id="freedom">
+        <div class="freedom__inner reveal">
+          <span class="eyebrow">FW26</span>
+          <h2>Limited stocks only.<br/>Will you choose freedom?</h2>
+          <button class="btn btn--solid" id="aboutCta">BUY NOW</button>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <img class="footer__lockup" src="brand/lockup.png" alt="MIRRIN — Warmth, reengineered." loading="lazy" />
+        <div class="footer__cols">
+          <div><h3>Shop</h3><a>Men</a><a>Women</a><a>New Arrivals</a></div>
+          <div><h3>Company</h3><a>About</a><a>Technology</a><a>Careers</a></div>
+          <div><h3>Support</h3><a>Sizing</a><a>Shipping</a><a>Returns</a></div>
+          <div><h3>Follow</h3><a>Instagram</a><a>YouTube</a><a>TikTok</a></div>
+        </div>
+        <div class="footer__base">
+          <span>© 2026 MIRRIN. All rights reserved.</span>
+          <span>REBEL AGAINST THE ORDINARY. · <a href="./">Campaign bg</a> · <a href="./?bg=mountain">Mountain bg</a></span>
+        </div>
+      </footer>
+    </main>
+
+    <!-- ===================== BUY / SIZE SHEET ===================== -->
+    <div class="sheet-scrim" id="sheetScrim"></div>
+    <aside class="sheet" id="buySheet" aria-hidden="true"></aside>
+
+    <!-- ===================== CART DRAWER ===================== -->
+    <div class="drawer-scrim" id="scrim"></div>
+    <aside class="cart" id="cart" aria-hidden="true">
+      <div class="cart__head">
+        <h3>Your Bag</h3>
+        <button class="cart__close" id="cartClose" aria-label="Close">
+          <svg viewBox="0 0 24 24"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="cart__items" id="cartItems"></div>
+      <div class="cart__empty" id="cartEmpty">Your bag is empty.</div>
+      <div class="cart__foot">
+        <div class="cart__row"><span>Subtotal</span><b id="cartTotal">$0</b></div>
+        <button class="btn btn--solid btn--block" id="checkoutBtn">CHECKOUT</button>
+        <div class="cart__note">Demo store — no payment is taken.</div>
+      </div>
+    </aside>
+
+    <!-- ===================== CHECKOUT MODAL (DEMO) ===================== -->
+    <div class="modal" id="checkoutModal" aria-hidden="true">
+      <div class="modal__box">
+        <button class="modal__close" id="checkoutClose" aria-label="Close">
+          <svg viewBox="0 0 24 24"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+        </button>
+        <span class="eyebrow">SECURE CHECKOUT</span>
+        <h3>Complete your order</h3>
+        <div class="demo-flag">DEMO ONLY — do not enter real card details. Nothing is saved or sent.</div>
+        <form id="checkoutForm" class="form" autocomplete="off">
+          <label>Email<input type="email" placeholder="you@example.com" required /></label>
+          <label>Name on card<input type="text" placeholder="Full name" required /></label>
+          <label>Card number<input type="text" inputmode="numeric" placeholder="0000 0000 0000 0000" maxlength="19" /></label>
+          <div class="form__row">
+            <label>Expiry<input type="text" placeholder="MM / YY" maxlength="7" /></label>
+            <label>CVC<input type="text" inputmode="numeric" placeholder="123" maxlength="4" /></label>
+          </div>
+          <button type="submit" class="btn btn--solid btn--block" id="payBtn">PAY <span id="payAmount">$0</span></button>
+          <div class="form__secure">Demo checkout for presentation purposes.</div>
+        </form>
+      </div>
+    </div>
+
+    <!-- ===================== WAITLIST MODAL ===================== -->
+    <div class="modal" id="waitModal" aria-hidden="true">
+      <div class="modal__box modal__box--sm">
+        <button class="modal__close" id="waitClose" aria-label="Close">
+          <svg viewBox="0 0 24 24"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+        </button>
+        <span class="eyebrow">EARLY ACCESS</span>
+        <h3>Join the MIRRIN list</h3>
+        <p class="modal__sub">Be first to the next drop. No spam, just the good stuff.</p>
+        <form id="waitForm" class="form">
+          <label>Email<input type="email" placeholder="you@example.com" required /></label>
+          <button type="submit" class="btn btn--solid btn--block">NOTIFY ME</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- ===================== TOAST ===================== -->
+    <div class="toast" id="toast"></div>
+
+  </body>
+</html>

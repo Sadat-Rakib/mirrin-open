@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta http-equiv="Permissions-Policy" content="accelerometer=(self), gyroscope=(self), magnetometer=(self)" />
+    <title>MIRRIN — Shop</title>
+    <meta name="description" content="Shop MIRRIN FW26. Cash Money Green, Deep Freeze Blue, Cherry Bomb Pink." />
+    <!-- gallery: 6 photos + 360 -->
+    <link rel="canonical" href="https://sadat-rakib.github.io/mirrin-open/buy.html" />
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="MIRRIN — Shop" />
+    <meta property="og:description" content="Shop MIRRIN FW26. Cash Money Green, Deep Freeze Blue, Cherry Bomb Pink." />
+    <meta property="og:image" content="https://sadat-rakib.github.io/mirrin-open/og.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="og.jpg" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <style>html,body,.pdp-page{background:#fff!important;color:#12141a}</style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Outfit:wght@400;500;600&family=Pirata+One&family=Permanent+Marker&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Outfit:wght@400;500;600&family=Pirata+One&family=Permanent+Marker&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+    <script>
+      (function () {
+        var id = new URLSearchParams(location.search).get('id') || 'lime';
+        var src = {
+          lime: 'campaign/looks/green-studio-full.jpg',
+          blue: 'campaign/looks/blue-studio-full.jpg',
+          pink: 'campaign/details/pink-collar.jpg',
+        }[id] || 'campaign/looks/green-studio-full.jpg';
+        var l = document.createElement('link');
+        l.rel = 'preload';
+        l.as = 'image';
+        l.href = src;
+        l.fetchPriority = 'high';
+        document.head.appendChild(l);
+      })();
+    </script>
+    <script type="module" crossorigin src="./assets/buy-CuSuZU5i.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/products-DaRoWPrD.js">
+    <link rel="stylesheet" crossorigin href="./assets/products-Bkig0OdP.css">
+  </head>
+  <body class="pdp-page">
+    <header class="nav">
+      <a class="nav__brand" href="./" aria-label="MIRRIN home">
+        <img class="nav__lockup" src="brand/nav-lockup-on-light.png" alt="MIRRIN" />
+      </a>
+      <nav class="nav__links" id="navLinks">
+        <a href="./">Campaign</a>
+        <a href="./#shop">Shop</a>
+        <a href="./#technology">Technology</a>
+        <a href="./#about">Our Story</a>
+      </nav>
+      <button class="nav__burger" id="navBurger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+      <div class="nav__right">
+        <button class="nav__icon nav__cart" id="navCart" aria-label="Cart">
+          <svg viewBox="0 0 24 24"><path d="M6 7h12l-1.2 12.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+          <span class="nav__badge" id="cartCount">0</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="pdp" id="pdp">
+      <nav class="pdp__crumbs" id="crumbs"></nav>
+
+      <section class="pdp__grid">
+        <div class="pdp__thumbs" id="thumbs"></div>
+        <div class="pdp__stage" id="stage">
+          <canvas id="inspect3d" class="pdp__gl" aria-label="3D inspect"></canvas>
+          <img id="stageA" class="pdp__shot is-on" alt="" />
+          <img id="stageB" class="pdp__shot" alt="" />
+          <button class="pdp__arrow pdp__arrow--prev" id="prevShot" aria-label="Previous">
+            <svg viewBox="0 0 24 24"><polyline points="15 6 9 12 15 18"/></svg>
+          </button>
+          <button class="pdp__arrow pdp__arrow--next" id="nextShot" aria-label="Next">
+            <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg>
+          </button>
+          <span class="pdp__badge" id="shotBadge">LOOK 01</span>
+          <button type="button" class="tilt-enable tilt-enable--pdp" data-tilt-enable hidden>
+            <span class="tilt-enable__hey">Hey</span>
+            <span class="tilt-enable__msg">Tap to enable tilt</span>
+            <span class="tilt-enable__sub">Move your phone — the jacket follows</span>
+          </button>
+        </div>
+        <aside class="pdp__info" id="info"></aside>
+      </section>
+
+      <p class="pdp__fit" id="fitNote"></p>
+
+      <section class="pdp__ratings">
+        <h2>Ratings</h2>
+        <div class="pdp__ratings-grid">
+          <div>
+            <div class="pdp__score"><b>5.0</b> ★</div>
+            <div class="pdp__score-sub" id="reviewCount">2 reviews</div>
+          </div>
+          <div>
+            <h3>Customer opinion</h3>
+            <blockquote>“Great fabric.”</blockquote>
+            <blockquote>“Great color, my fav jacket.”</blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section class="pdp__similar">
+        <h2>Similar colourways</h2>
+        <div class="pdp__similar-row" id="similar"></div>
+      </section>
+    </main>
+
+    <div class="drawer-scrim" id="scrim"></div>
+    <aside class="cart" id="cart" aria-hidden="true">
+      <div class="cart__head">
+        <h3>Your Bag</h3>
+        <button class="cart__close" id="cartClose" aria-label="Close">
+          <svg viewBox="0 0 24 24"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="cart__items" id="cartItems"></div>
+      <div class="cart__empty" id="cartEmpty">Your bag is empty.</div>
+      <div class="cart__foot">
+        <div class="cart__row"><span>Subtotal</span><b id="cartTotal">$0</b></div>
+        <a class="btn btn--solid btn--block" href="./#shop">KEEP SHOPPING</a>
+      </div>
+    </aside>
+
+    <div class="toast" id="toast"></div>
+  </body>
+</html>
